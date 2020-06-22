@@ -5,9 +5,25 @@
 <title th:text="${titulo}"></title>
 </head>
 <body>
-<h1 th:text="${titulo}"></h1>
+	<h1 th:text="${titulo}"></h1>
 
-<div th:if="${usuarios.size()==0}">no hay usuarios en el sistema</div>
+	<div th:if="${usuarios.size()==0}">no hay usuarios en el sistema</div>
 
+	<table th:if="${usuarios.size()>0}">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="usuario: ${usuarios}">
+				<th th:text="${usuario.nombre}"></th>
+				<th th:text="${usuario.apellido}"></th>
+				<th th:text="${usuario.email}"></th>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
