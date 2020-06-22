@@ -6,5 +6,21 @@
 </head>
 <body>
 <h1 th:text="${titulo}"></h1>
+<table th:if="${usuarios.size()>0}">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="usuario: ${usuarios}">
+				<th th:text="${usuario.nombre}"></th>
+				<th th:text="${usuario.apellido}"></th>
+				<th th:text="${usuario.email}"></th>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
