@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www3thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Enviar datos del request HTTP GET</title>
+</head>
+<body>
+<h1>Enviar datos del request HTTP GET</h1>
+<ul>
+<li>
+<a th:href="@{/params/string(texto='Hola parametro')}">/params/string?texto=Hola parametro</a>
+</li>
+<li>
+<a th:href="@{/params/string(texto='Hola segundo parametro')}">/params/string?texto=Hola segundo parametro</a>
+</li>
+</ul>
+</body>
+</html>
