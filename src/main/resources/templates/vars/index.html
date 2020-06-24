@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www3thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+<h1 th:text="${titulo}"></h1>
+<ul>
+<li><a th:href="@{/vars/string/} + 'Hola Thymeleaf'">/vars/string/Hola Thymeleaf</a></li>
+<li><a th:href="@{/vars/string/} + 'Hola Jhon'">/vars/string/Hola Jhon</a></li>
+<li><a th:href="@{/vars/string/} + 'Saludos Thymeleaf' + '/' + 7">/vars/string/Hola Thymeleaf/7</a></li>
+</ul>
+</body>
+</html>
